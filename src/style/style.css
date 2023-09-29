@@ -1,0 +1,301 @@
+@font-face {
+	font-family: "Helvetica";
+  	src: url("/src/fonts/helvetica-now.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Abc";
+  	src: url("/src/fonts/abc-social.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Futura Now Headline";
+  	src: url("/src/fonts/Futura.woff2") format("woff2");
+}
+
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	background-color: #F7F7F7;
+	overflow-x: hidden;
+}
+
+
+/* custom scroolbar */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px #F7F7F7; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424242; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #424242; 
+} 
+
+
+#main{
+	margin: 18px 24px;
+}
+
+nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.links{
+	display: flex;
+}
+
+.links>ul{
+	display: flex;
+	flex-direction: row;
+	height: fit-content;
+	margin-right: 195px; 
+}
+
+#logo{
+	cursor: pointer;
+}
+
+.links>ul li{
+	margin: 10px 0px 0px 65px;
+	text-decoration: none;
+	list-style: none;
+	text-transform: uppercase;
+	opacity: 1;
+    transition: opacity 0.2s ease-out;
+    font-size: 12px;
+    font-family: "Helvetica", "Lucida Sans", Tahoma, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.links>ul li::before{
+	content: '';
+	background-color:#000;
+	display: block;
+	width: 0px;
+	height: 1px;
+	position:relative;
+	bottom: -15px;
+	transition: all 0.2s ease-out;
+}
+
+.links>ul li:hover::before{
+	width: 100%;
+}
+
+.links>ul li:hover{
+	opacity: 0.5;
+}
+
+.btns-div{
+	display: flex;
+	height: fit-content;
+	margin-top: 7px;
+	margin-left: 65px;
+	align-items:center;
+	z-index: 2;
+	position: fixed;
+	top:18px;
+	right: 55px;
+}
+
+.btns-div::after{
+	content: '';
+	position: absolute;
+	width :120px;
+	height: 26px;
+	background-color: #F7F7F7;
+	border:1px solid #F7F7F7;
+	padding: 4px 8px;
+	border-radius: 30px;
+	z-index: 1;
+	right: -13px;
+	
+}
+
+#cart-icon{
+	height: 18px;
+	overflow: hidden;
+	cursor: pointer;
+	margin-left: 65px;
+	transition: all 0.2s ease-out;
+	z-index: 2;
+}
+
+#cart-icon:hover{
+	transform: rotateZ(-5deg);
+}
+
+#menu-icon{
+	transition: all 0.2s ease-out;
+	height: 100%;
+	z-index: 2;
+}
+
+#menu-icon span{
+	display: block;
+	height: 1px;
+	width: 18px;
+	background-color: #000; 
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+
+#menu-icon span:nth-child(1){
+	margin-bottom: 5.6px;
+}
+
+#menu-icon:hover>span:nth-child(1){
+	transform: translateY(1.3px);
+}
+
+#menu-icon:hover>span:nth-child(2){
+	transform: translateY(-1.3px);
+}
+
+.heading-lg{
+	text-transform: uppercase;
+	width: 100%;
+	height: 100%;
+	font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+	font-size: calc((100vw - 108px) * 0.1695);
+	margin-top: 120px;
+	letter-spacing: -0.02em;
+    line-height: 0.85em;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.video{
+	width: 95.5vw;
+	margin-top: 4px;
+}
+
+.video>video{
+	width: 100%;
+}
+#page2{
+	margin-top: 80px;
+}
+
+#words{
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-container{
+	display: flex;
+	justify-content: space-between;
+	gap:20px;
+	margin-top: 15px; 
+}
+
+.card{
+	width: 90%;
+	height: 70%;
+	overflow: hidden;
+	position: relative;
+}
+
+.card>img{
+	width: 100%;
+}
+
+.long-image>img{
+	height: 100% !important;
+}
+
+.items{
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	position: absolute;
+	top:50%;
+	left: 8%;
+	padding: 15px 0px;
+	border:1px;
+	border-radius: 25px;
+	cursor: pointer;
+	height: 3%;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+
+.items:hover{
+	height: 38%;
+}
+
+.first{
+	margin: 0px 60px;
+	width: 65% !important;
+}
+
+.dot{
+	background-color: #000;
+	width: 6px;
+	height: 6px;
+	border: 1px;
+	border-radius: 50%;
+}
+
+.box{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.green{
+	background-color: #c3d8c5;
+}
+.pink{
+	background-color: #f5dfcf;
+}
+.white{
+	background-color: #fff;
+}
+
+.second{
+	margin-top: 30px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.second>div{
+	width: 100%;
+	overflow: hidden;
+	margin: 4px;
+	text-align: center;
+}
+
+.second>div>img{
+	width: 100%;
+}
+
+.small-text{
+	font-size: 12px;
+    font-family: "Helvetica", "Lucida Sans", Tahoma, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
