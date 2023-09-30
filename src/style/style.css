@@ -41,14 +41,22 @@ html,body{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #424242; 
+  background-color: #424242; 
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #424242; 
+  background-color: #424242; 
 } 
+
+
+@media only screen and (max-width: 650px) {
+	::-webkit-scrollbar {
+  		width: 0px;
+	}
+}
+
 
 #main, header{
 	padding: 18px 24px;
@@ -126,7 +134,7 @@ nav{
 	width :120px;
 	height: 26px;
 	background-color: #F7F7F7;
-	border:1px solid #F7F7F7;
+	border:1px solid transparent;
 	padding: 4px 8px;
 	border-radius: 30px;
 	z-index: 1;
@@ -317,10 +325,89 @@ nav{
 }
 
 
+#page3{
+	display: flex;
+	margin-top: 80px;
+}
+
+#page3>div:nth-child(1){
+	width: 66.6%;
+}
+
+#page3>div:nth-child(1)>p{
+	font-size: 56px;
+	font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+    text-transform: uppercase;
+    line-height: 1em;
+    max-width: 14em;
+}
+
+#page3>div:nth-child(2){
+	width: 33.3%;
+	margin-left: 45px;
+}
+
+#page3>div:nth-child(2)>p{
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 80%;
+	letter-spacing: 0.01em;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+#page3>div:nth-child(2)>span{
+	cursor: pointer;
+	width: fit-content;
+    display: block;
+}
+
+#page3>div:nth-child(2)>span::after{
+	content: '';
+	background-color:#000;
+	display: block;
+	width: 100%;
+	height: 1px;
+	position:relative;
+	bottom: -10px;
+	transition: all 0.2s ease-out;
+}
+
+#page3>div:nth-child(2)>span:hover:after{
+	width:0%;
+}
+
+
 @media only screen and (max-width: 750px) {
   .links>ul{
   	display: none;
   }
+  #page3{
+  	flex-direction: column;
+  	gap:40px;
+  }
+  #page3>div:nth-child(1){
+	width: 100%;
+	text-align: center;
+  }
+  #page3>div:nth-child(1)>p{
+  	font-size: 32px;
+  }
+  #page3>div:nth-child(2){
+	width: 100%;
+	margin-left: 0px;
+	text-align: center;
+  }
+  #page3>div:nth-child(2)>p{
+	max-width: 100%;
+  }
+  #page3>div:nth-child(2)>span{
+  	margin: auto;
+  }
+
+
+
 }
 
 @media only screen and (max-width: 650px) {
