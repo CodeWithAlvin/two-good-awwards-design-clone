@@ -25,7 +25,10 @@ html,body{
 	background-color: #F7F7F7;
 	overflow-x: hidden;
 }
-
+a{
+	text-decoration: none;
+	color: #000;
+}
 
 /* custom scroolbar */
 /* width */
@@ -59,7 +62,7 @@ html,body{
 
 
 #main, header{
-	padding: 18px 24px;
+	padding: 18px 30px;
 }
 
 nav{
@@ -217,7 +220,7 @@ nav{
 }
 
 .video{
-	width: 95.5vw;
+	width: 100%;
 	margin-top: 4px;
 }
 
@@ -358,6 +361,7 @@ nav{
 }
 
 #page3>div:nth-child(2)>span{
+	font-family: "Abc", "Lucida Sans", Tahoma, sans-serif;
 	cursor: pointer;
 	width: fit-content;
     display: block;
@@ -378,10 +382,294 @@ nav{
 	width:0%;
 }
 
+#page4{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px; 
+    margin-top: 140px;
+}
+
+.product{
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+}
+
+.product img{
+	width: 85%;
+}
+
+.product span{
+	display: block;
+	margin-top: 8px; 
+}
+
+#page5{
+	margin-top: 160px;
+}
+
+.horizontal-names{
+	overflow-x: visible;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 40px;
+	gap:30px;
+	scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+.horizontal-names::-webkit-scrollbar {
+    display: none;
+}
+
+.name-container{
+	width: 10em;
+	height: 8em;
+	cursor: pointer;
+}
+
+.circle{
+	height: 15px;
+	width: 15px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	margin-bottom:20px;
+	transition: all 0.2s ease-out;
+}
+
+.name{
+	width: fit-content;
+	width: 10em;
+	font-size: 20px;
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+}
+
+.name::after{
+	content: "";
+	height: 15px;
+	width: 0px;
+	background-image: url("/src/images/line.svg");
+	background-size: auto;
+	background-repeat: no-repeat;
+	display: block;
+	position:relative;
+	bottom: -15px;
+	transition: all 0.2s ease-out;
+}
+
+.name-container:hover>.name::after{
+	width: 100%;
+}
+
+.name-container:hover>.circle{
+	background-color: #000;
+}
+
+.review{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.review p{
+	text-transform: uppercase;
+	width: 80%;
+	height: 100%;
+	font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 72px;
+	letter-spacing: -0.02em;
+    font-weight: 500;
+    text-align:center;
+    margin-top: 80px;
+}
+
+.btn{
+	background-color: #000;
+	border: 1px;
+	border-radius: 35px;
+	width:320px;
+	color: white;
+	font-size: 12px;
+	font-weight: 800;
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+	text-transform: uppercase;
+	padding: 23px 30px;
+	margin-top: 60px;
+	cursor: pointer;
+}
+
+.review>span{
+	margin-top: 20px;
+	text-align: center; 
+}
+
+.impact-container{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 250px;
+}
+
+.impact-text{
+	width: 33.3vw;
+}
+
+.impact-text h2{
+	font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+	margin-bottom: 40px;
+}
+
+.impact-text p{
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+	margin-bottom: 40px;
+	max-width: 80%;
+}
+
+.impact-text span{
+	font-family: "Abc", "Lucida Sans", Tahoma, sans-serif;
+	cursor: pointer;
+	width: fit-content;
+    display: block;
+}
+
+.impact-text span::after{
+	content: '';
+	background-color:#000;
+	display: block;
+	width: 100%;
+	height: 1px;
+	position:relative;
+	bottom: -10px;
+	transition: all 0.2s ease-out;
+}
+
+.impact-text span:hover:after{
+	width:0%;
+}
+
+.impact-image{
+	display: flex;
+	gap:10px;
+	justify-content: flex-end;	
+}
+
+.impact-image img{
+	width: 45%;
+}
+
+.email-input{
+	width:100%;
+	border: none;
+	border-bottom:1px solid #000;
+	font-size: 36px;
+	font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+	padding: 15px 0px;
+	outline: none;
+	margin-top: 80px;
+	text-transform: uppercase;
+	background-color: #F7F7F7;
+	white-space: wrap;
+}
+
+.email-input::placeholder{
+	color:#000;
+	white-space: wrap;
+}
+
+.fotter{
+	margin-top: 120px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	gap:12px;
+}
+
+.middle{
+	align-items: center;
+}
+
+.middle img{
+	width: 50%;
+}
+
+.policy-container{
+	display: flex;
+	justify-content: center;
+	gap:40px;
+	opacity: 0.7;
+	margin-top: 120px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+}
+
+.right{
+	text-align: right;
+}
+
+.container>span{
+	text-transform: uppercase;
+	opacity: 0.7;
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 12px;
+
+}
+
+.container ul{
+	list-style: none;
+	text-transform: uppercase;
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 12px;
+}
+.container li{
+	text-transform: uppercase;
+	margin-top: 8px;
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 12px;
+}
+
+.bye-content{
+	font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 14px;
+	width: 80%;
+	text-align: center;
+	margin: 80px auto;
+}
+
+@media only screen and (max-width: 985px) {
+	.impact-container{
+		margin-top: 80px; 
+		flex-direction: column-reverse;
+	}
+	.impact-image{
+		justify-content: space-between;
+	}
+	.impact-text{
+		width:100%;
+		margin-top: 40px;
+	}
+	.impact-text p{
+		max-width: 100%;
+	}
+	.email-input{
+		font-size: 20px;
+		padding: 25px 0px;
+	}
+}
 
 @media only screen and (max-width: 750px) {
   .links>ul{
   	display: none;
+  }
+  .btns-div{
+  	right: 15px;
   }
   #page3{
   	flex-direction: column;
@@ -393,6 +681,7 @@ nav{
   }
   #page3>div:nth-child(1)>p{
   	font-size: 32px;
+  	margin: auto;
   }
   #page3>div:nth-child(2){
 	width: 100%;
@@ -405,7 +694,10 @@ nav{
   #page3>div:nth-child(2)>span{
   	margin: auto;
   }
-
+  .review p{
+  	font-size: 24px;
+  	margin-top: 50px;
+  }
 
 
 }
@@ -420,7 +712,7 @@ nav{
   }
 
   #main, header{
-	padding: 6px 6px;
+	padding: 6px 15px;
 	}
 
   .heading-lg{
@@ -429,4 +721,32 @@ nav{
 	margin-bottom: 20px;
 	
   }	
+  #page4{
+    grid-gap: 60px;    
+  }
+  .product img{
+	width: 95%;
+  }
+
+  #page5{
+	margin-top: 100px;
+  }
+
+  .name{
+  	width: 8em;
+  }
+  .name-container{
+  	width: 8em;
+  	margin-top: 0px;
+  }
+  .middle{
+
+  }
+  .bye-content{
+  	width: 100%;
+  }
+  .policy-container{
+  	font-size: 10px;
+  }
+
 }
