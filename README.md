@@ -2,4 +2,4 @@
 frontend clone of awwards website twogood.com.au 
 
 Live on: 
-[twogoodclone.netlify.app](twogoodclone.netlify.app)
+[twogoodclone.netlify.app](https://twogoodclone.netlify.app)
