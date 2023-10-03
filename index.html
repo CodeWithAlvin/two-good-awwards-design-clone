@@ -8,6 +8,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
 </head>
 <body>
+	<div class="lagging-circle-1" id="lagging-circle-1"></div>
 	<header>
 			<nav class="">
 				<img src="/src/images/logo.svg" alt="logo" id="logo" class="">
@@ -72,8 +73,8 @@
 	<div id="main">
 		<div id="page1">
 			<h1 class="heading-lg">Change <br>The Course</h1>
-			<div class="video">
-				<video src="src/video/Intro.mp4#t=0,30">Your browser does not support the video tag.</video>  <!-- autoplay muted loop -->
+			<div class="video" id="video">
+				<video autoplay muted src="src/video/Intro.mp4#t=0,10">Your browser does not support the video tag.</video>
 			</div>
 		</div>
 		<div id="page2">
@@ -294,6 +295,9 @@
 		</div>
 	</div>
 
+	<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="src/script/script.js"></script>
 </body>
 </html>
